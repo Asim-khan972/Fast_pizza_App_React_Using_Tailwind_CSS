@@ -6,6 +6,7 @@ import {
   formatDate,
 } from "../../utils/helpers";
 
+import OrderItem from "./OrderItem";
 // const order = {
 //   id: "ABCDEF",
 //   customer: "Jonas",
@@ -74,6 +75,12 @@ function Order() {
         </p>
         <p className="text-xs text-stone-500">(Estimated delivery: {formatDate(estimatedDelivery)})</p>
       </div>
+      <ul className="dive-stone-200 divide-y border-b border-t">
+        {cart.map((item) => (
+          <OrderItem item={item} key={item.id} />
+        ))}
+      </ul>
+
 
          <div className="space-y-2 bg-stone-200 px-6 py-5">
         <p className="text-sm font-medium text-stone-600">Price pizza: {formatCurrency(orderPrice)}</p>
