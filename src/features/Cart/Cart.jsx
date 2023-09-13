@@ -52,7 +52,7 @@ function Cart() {
           Order pizzas
         </Button>
 
-        <Button type="secondary" onClick={()=>dispatch(clearCart())}>Clear cart</Button>
+        <Button type="secondary" onClick={()=>dispatch(clearCart())}>Clear Cart</Button>
       </div>
     </div>
   );
